@@ -1,6 +1,7 @@
-package com.example.demo.models;
+package com.example.demo.models.deserialization;
 
 public class TransitTime {
+
     public String from;
     public String to;
     public Dispatch dispatch;

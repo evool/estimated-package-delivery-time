@@ -1,8 +1,9 @@
-package com.example.demo.models;
+package com.example.demo.models.deserialization;
 
 import java.util.List;
 
 public class Service {
+
     public String name;
     public List<TransitTime> transitTimes;
 

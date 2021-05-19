@@ -12,9 +12,8 @@ import java.util.Date;
 @RestController
 public class LoginController {
 
-    // TODO
     @PostMapping("/api/login")
-    public String login(@RequestBody UserModel user)
+    public String LoginUser(@RequestBody UserModel user)
     {
         long actualTime = System.currentTimeMillis();
         return Jwts.builder()

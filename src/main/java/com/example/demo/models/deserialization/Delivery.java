@@ -1,6 +1,7 @@
-package com.example.demo.models;
+package com.example.demo.models.deserialization;
 
-public class Transit {
+public class Delivery {
+
     public int duration;
     public boolean monday;
     public boolean tuesday;
