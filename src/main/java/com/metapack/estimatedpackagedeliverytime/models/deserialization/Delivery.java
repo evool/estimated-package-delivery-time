@@ -1,6 +1,7 @@
-package com.example.demo.models.deserialization;
+package com.metapack.estimatedpackagedeliverytime.models.deserialization;
 
-public class Dispatch {
+public class Delivery {
+
     public int duration;
     public boolean monday;
     public boolean tuesday;

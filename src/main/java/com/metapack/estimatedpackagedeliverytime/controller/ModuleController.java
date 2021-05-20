@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.metapack.estimatedpackagedeliverytime.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 

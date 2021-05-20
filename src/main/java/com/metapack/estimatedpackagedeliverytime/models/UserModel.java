@@ -1,4 +1,4 @@
-package com.example.demo.models;
+package com.metapack.estimatedpackagedeliverytime.models;
 
 import javax.annotation.processing.Generated;
 import javax.persistence.Entity;

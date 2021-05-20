@@ -1,6 +1,6 @@
-package com.example.demo.models.deserialization;
+package com.metapack.estimatedpackagedeliverytime.models.deserialization;
 
-public class Transit {
+public class Dispatch {
     public int duration;
     public boolean monday;
     public boolean tuesday;

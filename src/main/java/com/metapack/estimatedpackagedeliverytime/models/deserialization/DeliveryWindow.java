@@ -1,4 +1,4 @@
-package com.example.demo.models.deserialization;
+package com.metapack.estimatedpackagedeliverytime.models.deserialization;
 
 public class DeliveryWindow {
 
