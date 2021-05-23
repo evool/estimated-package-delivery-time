@@ -11,9 +11,9 @@ public class DeliveryWindow {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalTime from;
+    private LocalTime timeFrom;
 
-    private LocalTime to;
+    private LocalTime timeTo;
 
     public Long getId() {
         return id;
@@ -23,19 +23,19 @@ public class DeliveryWindow {
         this.id = id;
     }
 
-    public LocalTime getFrom() {
-        return from;
+    public LocalTime getTimeFrom() {
+        return timeFrom;
     }
 
-    public void setFrom(LocalTime from) {
-        this.from = from;
+    public void setTimeFrom(LocalTime from) {
+        this.timeFrom = from;
     }
 
-    public LocalTime getTo() {
-        return to;
+    public LocalTime getTimeTo() {
+        return timeTo;
     }
 
-    public void setTo(LocalTime to) {
-        this.to = to;
+    public void setTimeTo(LocalTime to) {
+        this.timeTo = to;
     }
 }

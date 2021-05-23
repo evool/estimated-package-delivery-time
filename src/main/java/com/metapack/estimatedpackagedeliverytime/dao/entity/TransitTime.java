@@ -1,7 +1,6 @@
 package com.metapack.estimatedpackagedeliverytime.dao.entity;
 
 import javax.persistence.*;
-import java.time.LocalTime;
 
 @Entity
 @Table(name = "transit_times")
@@ -11,9 +10,9 @@ public class TransitTime {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalTime from;
+    private String countryFrom;
 
-    private LocalTime to;
+    private String countryTo;
 
     @OneToOne
     private DaysAndDuration dispatch;
@@ -32,20 +31,20 @@ public class TransitTime {
         this.id = id;
     }
 
-    public LocalTime getFrom() {
-        return from;
+    public String getCountryFrom() {
+        return countryFrom;
     }
 
-    public void setFrom(LocalTime from) {
-        this.from = from;
+    public void setCountryFrom(String from) {
+        this.countryFrom = from;
     }
 
-    public LocalTime getTo() {
-        return to;
+    public String getCountryTo() {
+        return countryTo;
     }
 
-    public void setTo(LocalTime to) {
-        this.to = to;
+    public void setCountryTo(String to) {
+        this.countryTo = to;
     }
 
     public DaysAndDuration getDispatch() {
