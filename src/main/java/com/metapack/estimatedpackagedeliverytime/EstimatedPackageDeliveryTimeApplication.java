@@ -1,13 +1,12 @@
-package com.example.demo;
+package com.metapack.estimatedpackagedeliverytime;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class EstimatedPackageDeliveryTimeApplication {
-//123123123123ASD
-	public static void main(String[] args) {
-		SpringApplication.run(EstimatedPackageDeliveryTimeApplication.class, args);
-	}
 
+    public static void main(String[] args) {
+        SpringApplication.run(EstimatedPackageDeliveryTimeApplication.class, args);
+    }
 }
