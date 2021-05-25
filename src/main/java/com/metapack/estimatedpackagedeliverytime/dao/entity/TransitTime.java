@@ -10,17 +10,19 @@ public class TransitTime {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String countryFrom;
+    @Column(name="countryFrom")
+    private String from;
 
-    private String countryTo;
+    @Column(name="countryTo")
+    private String to;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private DaysAndDuration dispatch;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private DaysAndDuration transit;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private DaysAndDuration delivery;
 
     public Long getId() {
@@ -31,20 +33,20 @@ public class TransitTime {
         this.id = id;
     }
 
-    public String getCountryFrom() {
-        return countryFrom;
+    public String getFrom() {
+        return from;
     }
 
-    public void setCountryFrom(String from) {
-        this.countryFrom = from;
+    public void setFrom(String from) {
+        this.from = from;
     }
 
-    public String getCountryTo() {
-        return countryTo;
+    public String getTo() {
+        return to;
     }
 
-    public void setCountryTo(String to) {
-        this.countryTo = to;
+    public void setTo(String to) {
+        this.to = to;
     }
 
     public DaysAndDuration getDispatch() {

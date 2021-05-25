@@ -6,17 +6,17 @@ import java.util.List;
 @Entity
 @Table(name = "modules")
 public class Module {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String code;
 
+    @Column(name = "service")
     @OneToMany
-    private List<Service> service;
+    private List<Service> services;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private DeliveryWindow deliveryWindow;
 
     public Long getId() {
@@ -35,12 +35,12 @@ public class Module {
         this.code = code;
     }
 
-    public List<Service> getService() {
-        return service;
+    public List<Service> getServices() {
+        return services;
     }
 
-    public void setService(List<Service> service) {
-        this.service = service;
+    public void setServices(List<Service> services) {
+        this.services = services;
     }
 
     public DeliveryWindow getDeliveryWindow() {
@@ -50,4 +50,5 @@ public class Module {
     public void setDeliveryWindow(DeliveryWindow deliveryWindow) {
         this.deliveryWindow = deliveryWindow;
     }
+
 }
