@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Date;
 
 @RestController
-@RequestMapping("/api")
 public class UserController {
     private UserService userService;
 
@@ -34,7 +33,7 @@ public class UserController {
             Long now = System.currentTimeMillis();
             return Jwts.builder()
                     .setSubject(user.getUsername())
-                    .claim("username", "role")
+                    .claim("roles", user.getRole())
                     .setIssuedAt(new Date(now))
                     .setExpiration(new Date(now + 10000)) // 4
                     .signWith(SignatureAlgorithm.HS512, "secretkey").compact();
