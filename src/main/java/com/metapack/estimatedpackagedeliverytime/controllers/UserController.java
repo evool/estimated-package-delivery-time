@@ -5,8 +5,6 @@ import com.metapack.estimatedpackagedeliverytime.services.UserService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -45,6 +43,4 @@ public class UserController {
             return "Błędny login lub hasło";
         }
     }
-
-
 }

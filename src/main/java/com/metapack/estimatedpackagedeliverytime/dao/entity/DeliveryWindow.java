@@ -9,12 +9,13 @@ public class DeliveryWindow {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
 
-    @Column(name = "timeFrom")
+    @Column(name = "TIME_FROM")
     private LocalTime from;
 
-    @Column(name = "timeTo")
+    @Column(name = "TIME_TO")
     private LocalTime to;
 
     public Long getId() {

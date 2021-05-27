@@ -18,8 +18,11 @@ public class ModuleService {
 
     public Module save(Module module)
     {
+        // odpowiednia konwersja from i to na HH:mm:ss
+
+        //LocalTime from = module.getDeliveryWindow().getFrom();
+        //LocalTime to = module.getDeliveryWindow().getTo();
+
         return moduleRepository.save(module);
     }
-
-    // TODO
 }

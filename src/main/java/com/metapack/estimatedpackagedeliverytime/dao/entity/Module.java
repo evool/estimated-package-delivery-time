@@ -1,5 +1,7 @@
 package com.metapack.estimatedpackagedeliverytime.dao.entity;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -13,8 +15,7 @@ public class Module {
 
     private String code;
 
-    @Column(name = "service")
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Service> services;
 
     @OneToOne(cascade = CascadeType.ALL)

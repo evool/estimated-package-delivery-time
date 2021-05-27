@@ -8,24 +8,25 @@ public class DaysAndDuration {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "DURATION")
     private Integer duration;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "MONDAY")
     private Boolean monday;
-    @Column(nullable = false)
+    @Column(nullable = false, name = "TUESDAY")
     private Boolean tuesday;
-    @Column(nullable = false)
+    @Column(nullable = false, name = "WEDNESDAY")
     private Boolean wednesday;
-    @Column(nullable = false)
+    @Column(nullable = false, name = "THURSDAY")
     private Boolean thursday;
-    @Column(nullable = false)
+    @Column(nullable = false, name = "FRIDAY")
     private Boolean friday;
-    @Column(nullable = false)
+    @Column(nullable = false, name = "SATURDAY")
     private Boolean saturday;
-    @Column(nullable = false)
+    @Column(nullable = false, name = "SUNDAY")
     private Boolean sunday;
 
     public Long getId() {

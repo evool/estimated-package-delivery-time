@@ -9,11 +9,14 @@ public class Service {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
 
+    @Column(name = "NAME")
     private String name;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.PERSIST)
+    @Column(name = "TRANSIT_TIMES")
     private List<TransitTime> transitTime;
 
     public Long getId() {
