@@ -3,27 +3,27 @@ package com.metapack.estimatedpackagedeliverytime.dao.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "transit_times")
-public class TransitTime {
+@Table(name = "transitTimes")
+public class TransitTimes {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="countryFrom")
+    @Column(name="COUNTRY_FROM")
     private String from;
 
-    @Column(name="countryTo")
+    @Column(name="COUNTRY_TO")
     private String to;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private DaysAndDuration dispatch;
+    private Dispatch dispatch;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private DaysAndDuration transit;
+    private Transit transit;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private DaysAndDuration delivery;
+    private Delivery delivery;
 
     public Long getId() {
         return id;
@@ -49,27 +49,27 @@ public class TransitTime {
         this.to = to;
     }
 
-    public DaysAndDuration getDispatch() {
+    public Dispatch getDispatch() {
         return dispatch;
     }
 
-    public void setDispatch(DaysAndDuration dispatch) {
+    public void setDispatch(Dispatch dispatch) {
         this.dispatch = dispatch;
     }
 
-    public DaysAndDuration getTransit() {
+    public Transit getTransit() {
         return transit;
     }
 
-    public void setTransit(DaysAndDuration transit) {
+    public void setTransit(Transit transit) {
         this.transit = transit;
     }
 
-    public DaysAndDuration getDelivery() {
+    public Delivery getDelivery() {
         return delivery;
     }
 
-    public void setDelivery(DaysAndDuration delivery) {
+    public void setDelivery(Delivery delivery) {
         this.delivery = delivery;
     }
 }

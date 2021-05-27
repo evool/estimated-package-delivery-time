@@ -3,9 +3,8 @@ package com.metapack.estimatedpackagedeliverytime.dao.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "days_and_duration")
-public class DaysAndDuration {
-
+@Table(name = "DELIVERY")
+public class Delivery {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")

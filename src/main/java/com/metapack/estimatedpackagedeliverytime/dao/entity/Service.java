@@ -15,9 +15,8 @@ public class Service {
     @Column(name = "NAME")
     private String name;
 
-    @OneToMany(cascade = CascadeType.PERSIST)
-    @Column(name = "TRANSIT_TIMES")
-    private List<TransitTime> transitTime;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<TransitTimes> transitTimes;
 
     public Long getId() {
         return id;
@@ -35,11 +34,11 @@ public class Service {
         this.name = name;
     }
 
-    public List<TransitTime> getTransitTime() {
-        return transitTime;
+    public List<TransitTimes> getTransitTime() {
+        return transitTimes;
     }
 
-    public void setTransitTime(List<TransitTime> transitTime) {
-        this.transitTime = transitTime;
+    public void setTransitTime(List<TransitTimes> transitTimes) {
+        this.transitTimes = transitTimes;
     }
 }
