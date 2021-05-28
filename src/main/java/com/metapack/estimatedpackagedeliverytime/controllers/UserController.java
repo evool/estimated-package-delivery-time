@@ -26,20 +26,8 @@ public class UserController {
     }
 
     @GetMapping("/authorize")
-    public String authorizeUser(@RequestBody User user)
+    public void authorizeUser(@RequestBody User user)
     {
-        if(userService.findByUsername(user))
-        {
-            Long now = System.currentTimeMillis();
-            return Jwts.builder()
-                    .setSubject(user.getUsername())
-                    .claim("roles", user.getRole())
-                    .setIssuedAt(new Date(now))
-                    .setExpiration(new Date(now + 10000)) // 4
-                    .signWith(SignatureAlgorithm.HS512, "secretkey").compact();
-        }
-        else {
-            return "Błędny login lub hasło";
-        }
+
     }
 }

@@ -1,26 +1,19 @@
 package com.metapack.estimatedpackagedeliverytime;
 
-import com.metapack.estimatedpackagedeliverytime.authorize.JwtFilter;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 import java.util.Collections;
 
-@SpringBootApplication
+@Configuration
+@EnableAutoConfiguration
+@ComponentScan
 public class EstimatedPackageDeliveryTimeApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(EstimatedPackageDeliveryTimeApplication.class, args);
-    }
-
-    @Bean
-    public FilterRegistrationBean filterRegistrationBean()
-    {
-        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
-        filterRegistrationBean.setFilter(new JwtFilter());
-        filterRegistrationBean.setUrlPatterns(Collections.singleton("/createModule"));
-        return filterRegistrationBean;
     }
 }
