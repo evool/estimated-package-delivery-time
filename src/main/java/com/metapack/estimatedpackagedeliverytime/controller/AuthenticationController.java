@@ -1,9 +1,9 @@
-package com.metapack.estimatedpackagedeliverytime.controllers;
+package com.metapack.estimatedpackagedeliverytime.controller;
 
 import com.metapack.estimatedpackagedeliverytime.authorization.JwtUtil;
 import com.metapack.estimatedpackagedeliverytime.authorization.MyUserDetails;
-import com.metapack.estimatedpackagedeliverytime.models.AuthenticationResponse;
-import com.metapack.estimatedpackagedeliverytime.models.AuthenticationUser;
+import com.metapack.estimatedpackagedeliverytime.model.AuthenticationResponse;
+import com.metapack.estimatedpackagedeliverytime.model.AuthenticationUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

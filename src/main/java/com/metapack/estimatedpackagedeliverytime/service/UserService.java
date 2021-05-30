@@ -1,7 +1,7 @@
-package com.metapack.estimatedpackagedeliverytime.services;
+package com.metapack.estimatedpackagedeliverytime.service;
 
-import com.metapack.estimatedpackagedeliverytime.dao.entity.User;
-import com.metapack.estimatedpackagedeliverytime.repositories.UserRepository;
+import com.metapack.estimatedpackagedeliverytime.entity.User;
+import com.metapack.estimatedpackagedeliverytime.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

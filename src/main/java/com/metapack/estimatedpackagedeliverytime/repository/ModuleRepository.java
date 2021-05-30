@@ -1,6 +1,6 @@
-package com.metapack.estimatedpackagedeliverytime.repositories;
+package com.metapack.estimatedpackagedeliverytime.repository;
 
-import com.metapack.estimatedpackagedeliverytime.dao.entity.Module;
+import com.metapack.estimatedpackagedeliverytime.entity.Module;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ModuleRepository extends CrudRepository<Module, Long> {
