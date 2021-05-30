@@ -25,4 +25,9 @@ public class ModuleService {
 
         return moduleRepository.save(module);
     }
+
+    public Module getModule(String code)
+    {
+        return moduleRepository.findByCode(code);
+    }
 }
