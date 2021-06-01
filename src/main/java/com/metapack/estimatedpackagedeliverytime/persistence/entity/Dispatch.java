@@ -1,4 +1,4 @@
-package com.metapack.estimatedpackagedeliverytime.entity;
+package com.metapack.estimatedpackagedeliverytime.persistence.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -6,10 +6,11 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "DELIVERY")
+@Table(name = "DISPATCH")
 @Getter
 @Setter
-public class Delivery {
+public class Dispatch {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")

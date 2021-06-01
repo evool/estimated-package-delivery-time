@@ -1,4 +1,4 @@
-package com.metapack.estimatedpackagedeliverytime.entity;
+package com.metapack.estimatedpackagedeliverytime.persistence.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -17,10 +17,10 @@ public class DeliveryWindow {
     @Column(name = "ID")
     private Long id;
 
-    @Column(name = "TIME_FROM")
+    @Column(nullable = false, name = "TIME_FROM")
     private LocalTime from;
 
-    @Column(name = "TIME_TO")
+    @Column(nullable = false, name = "TIME_TO")
     private LocalTime to;
 
 }

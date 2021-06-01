@@ -1,4 +1,4 @@
-package com.metapack.estimatedpackagedeliverytime.entity;
+package com.metapack.estimatedpackagedeliverytime.persistence.entity;
 
 import lombok.Getter;
 import lombok.Setter;

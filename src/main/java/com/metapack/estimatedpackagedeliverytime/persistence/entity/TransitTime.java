@@ -1,4 +1,4 @@
-package com.metapack.estimatedpackagedeliverytime.entity;
+package com.metapack.estimatedpackagedeliverytime.persistence.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,16 +9,17 @@ import javax.persistence.*;
 @Table(name = "transitTimes")
 @Getter
 @Setter
-public class TransitTimes {
+public class TransitTime {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
 
-    @Column(name="COUNTRY_FROM")
+    @Column(nullable = false, name="COUNTRY_FROM")
     private String from;
 
-    @Column(name="COUNTRY_TO")
+    @Column(nullable = false, name="COUNTRY_TO")
     private String to;
 
     @OneToOne(cascade = CascadeType.ALL)

@@ -1,4 +1,4 @@
-package com.metapack.estimatedpackagedeliverytime.entity;
+package com.metapack.estimatedpackagedeliverytime.persistence.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -17,10 +17,11 @@ public class Service {
     @Column(name = "ID")
     private Long id;
 
-    @Column(name = "NAME")
+    @Column(nullable = false, name = "NAME")
     private String name;
 
+    @Column(nullable = false, name = "TRANSIT_TIMES")
     @OneToMany(cascade = CascadeType.ALL)
-    private List<TransitTimes> transitTimes;
+    private List<TransitTime> transitTimes;
 
 }
