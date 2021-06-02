@@ -24,7 +24,7 @@ public class Module {
     @Column(nullable = false, name = "SERVICES")
     private List<Service> services;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private DeliveryWindow deliveryWindow;
 
 }

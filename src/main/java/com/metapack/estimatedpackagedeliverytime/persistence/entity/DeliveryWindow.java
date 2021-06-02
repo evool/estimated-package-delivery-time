@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalTime;
 
 @Entity
 @Table(name = "delivery_windows")
@@ -18,9 +17,9 @@ public class DeliveryWindow {
     private Long id;
 
     @Column(nullable = false, name = "TIME_FROM")
-    private LocalTime from;
+    private String from;
 
     @Column(nullable = false, name = "TIME_TO")
-    private LocalTime to;
+    private String to;
 
 }
